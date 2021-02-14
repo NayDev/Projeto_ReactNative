@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text,TouchableOpacity } from 'react-native';
+import { ScrollView, Text,TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 const produtos = [
@@ -19,10 +19,7 @@ const produtos = [
         nome: "Computador Completo Intel 7ª Geração 8GB HD 500GB (Placa de vídeo Intel UHD 610) Monitor 19.5",
         preco: 1926
     },
-    {
-        nome: "Computador Completo Intel 7ª Geração 8GB HD 500GB (Placa de vídeo Intel UHD 610) Monitor 19.5",
-        preco: 2105
-    },
+  
     
   
     
@@ -34,7 +31,7 @@ function Produtos({navigation}) {
 }
     return (
         
-        <View >
+        <ScrollView  style={styles.caixa}>
             <Text style={styles.titulo}>Produtos</Text>
           
 
@@ -52,7 +49,7 @@ function Produtos({navigation}) {
  <TouchableOpacity style={styles.btn} onPress={home} >
                         <Text style={styles.texto}>Voltar</Text>
                     </TouchableOpacity>
-        </View>
+        </ScrollView>
     )
 }
 
